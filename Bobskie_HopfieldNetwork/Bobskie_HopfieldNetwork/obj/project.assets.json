@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bob Kyle\\source\\repos\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork.csproj",
+      "projectUniqueName": "C:\\Users\\Bob Kyle\\Documents\\3rd Year\\2nd Sem\\CS346\\HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork.csproj",
       "projectName": "Bobskie_HopfieldNetwork",
-      "projectPath": "C:\\Users\\Bob Kyle\\source\\repos\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork.csproj",
+      "projectPath": "C:\\Users\\Bob Kyle\\Documents\\3rd Year\\2nd Sem\\CS346\\HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork.csproj",
       "packagesPath": "C:\\Users\\Bob Kyle\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bob Kyle\\source\\repos\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\obj\\",
+      "outputPath": "C:\\Users\\Bob Kyle\\Documents\\3rd Year\\2nd Sem\\CS346\\HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bob Kyle\\AppData\\Roaming\\NuGet\\NuGet.Config",
