@@ -295,8 +295,5 @@ namespace Bobskie_HopfieldNetwork
             }
             label6.Text = display;
         }
-      
-
-
     }
 }
