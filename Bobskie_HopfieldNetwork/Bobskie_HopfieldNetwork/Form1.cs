@@ -1,13 +1,18 @@
+using System.Reflection.Metadata.Ecma335;
+
 namespace Bobskie_HopfieldNetwork
 {
     public partial class Form1 : Form
     {
         int[] input;
 
+
         public Form1()
         {
             InitializeComponent();
+   
             input = new int[9] { -1, -1, -1, -1, -1, -1, -1, -1, -1 };
+           
             inputVectorLabel();
         }
 
@@ -149,7 +154,7 @@ namespace Bobskie_HopfieldNetwork
 
         private void button19_Click(object sender, EventArgs e)
         {
-            compute();
+            solve();
         }
         private void button20_Click(object sender, EventArgs e)
         {
@@ -172,12 +177,16 @@ namespace Bobskie_HopfieldNetwork
             button16.BackColor = Color.White;
             button17.BackColor = Color.White;
             button18.BackColor = Color.White;
+
+            label4.Text = "";
+            label6.Text = "";
         }
 
         /// <summary>
         /// Computes for the Hopfield network
+        /// Asynchronous updating
         /// </summary>
-        private void compute()
+        private void solve()
         {
             int[,] weight = new int[9, 9]
                      {
@@ -192,36 +201,54 @@ namespace Bobskie_HopfieldNetwork
                         { 2, 0, 2, -2, -2, -2, 2, 0, 0 }
                      };
 
-            int[] output = new int[9];
+            int[] outputVector = new int[9];
+            int[] inputVector = input;
+            int[] valuerray = new int[9];
+            int[] prevSetOfOutputVector = new int[9];
 
-            for(int i=0; i<9; i++)
+            while (true)
             {
-                for(int j=0; j<9; j++)
+                
+                for (int i = 0; i < 9; i++)
                 {
-                    output[i] += (weight[i,j] * input[j]);
+                    int value = 0;
+                    for (int j = 0; j < 9; j++)
+                    {
+                        value += (weight[i, j] * inputVector[j]);
+                    }
+
+                    //meant for displaying the values
+                    valuerray[i] = value;
+
+                    outputVector = inputVector;
+                    outputVector[i] = thresholdFunc(value);
+
+                    //inputVector becomes the output vector
+                    inputVector = outputVector;
                 }
+
+                if(Enumerable.SequenceEqual(prevSetOfOutputVector, outputVector)){
+                    break;
+                }
+                prevSetOfOutputVector = outputVector;
+
             }
-            valueLabel(output);
 
-            output = thresholdFunc(output);
-            outputVectorLabel(output);
+            valueLabel(valuerray);
+            outputVectorLabel(outputVector);
 
-            //output
-            outputRes(output);
+            //output pattern
+            outputRes(outputVector);
         }
 
         /// <summary>
-        /// converting the numerical values to 1 and -1
+        /// converting the value to 1 and -1
         /// </summary>
         /// <param name="output">the values</param>
         /// <returns>the converted values</returns>
-        private int[] thresholdFunc(int[] output) 
-        { 
-            for(int i=0; i<9; i++)
-            {
-                output[i] = (output[i] > 0) ? 1 : -1;
-            }
-            return output;
+        private int thresholdFunc(int value) 
+        {
+            return value > 0 ? 1 : -1;
         }
 
         /// <summary>
