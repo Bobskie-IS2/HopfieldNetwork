@@ -185,6 +185,7 @@ namespace Bobskie_HopfieldNetwork
         /// <summary>
         /// Computes for the Hopfield network
         /// Asynchronous updating
+        /// Computes and prints the results
         /// </summary>
         private void solve()
         {
@@ -203,12 +204,11 @@ namespace Bobskie_HopfieldNetwork
 
             int[] outputVector = new int[9];
             int[] inputVector = input;
-            int[] valuerray = new int[9];
+            int[] valueArray = new int[9];
             int[] prevSetOfOutputVector = new int[9];
 
             while (true)
             {
-                
                 for (int i = 0; i < 9; i++)
                 {
                     int value = 0;
@@ -218,7 +218,7 @@ namespace Bobskie_HopfieldNetwork
                     }
 
                     //meant for displaying the values
-                    valuerray[i] = value;
+                    valueArray[i] = value;
 
                     outputVector = inputVector;
                     outputVector[i] = thresholdFunc(value);
@@ -227,6 +227,7 @@ namespace Bobskie_HopfieldNetwork
                     inputVector = outputVector;
                 }
 
+                //stops when the output vector has been stabilized 
                 if(Enumerable.SequenceEqual(prevSetOfOutputVector, outputVector)){
                     break;
                 }
@@ -234,7 +235,7 @@ namespace Bobskie_HopfieldNetwork
 
             }
 
-            valueLabel(valuerray);
+            valueLabel(valueArray);
             outputVectorLabel(outputVector);
 
             //output pattern
@@ -242,10 +243,10 @@ namespace Bobskie_HopfieldNetwork
         }
 
         /// <summary>
-        /// converting the value to 1 and -1
+        /// converting the value to 1 or -1
         /// </summary>
-        /// <param name="output">the values</param>
-        /// <returns>the converted values</returns>
+        /// <param name="output">the value</param>
+        /// <returns>the converted value</returns>
         private int thresholdFunc(int value) 
         {
             return value > 0 ? 1 : -1;
@@ -288,7 +289,7 @@ namespace Bobskie_HopfieldNetwork
         }
 
         /// <summary>
-        /// Displays the value prior going to threshold in "Value:"
+        /// Displays the obtained values
         /// </summary>
         /// <param name="output">output before threshold</param>
         private void valueLabel(int[] output)
