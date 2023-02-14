@@ -249,7 +249,7 @@ namespace Bobskie_HopfieldNetwork
         /// <returns>the converted value</returns>
         private int thresholdFunc(int value) 
         {
-            return value > 0 ? 1 : -1;
+            return value >= 0 ? 1 : -1;
         }
 
         /// <summary>
