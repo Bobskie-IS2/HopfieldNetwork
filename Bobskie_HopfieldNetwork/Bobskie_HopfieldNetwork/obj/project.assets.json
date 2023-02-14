@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\charl\\.nuget\\packages\\": {}
+    "C:\\Users\\Bob Kyle\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\charl\\OneDrive\\Desktop\\Intelligent Systems 2\\intelligent system acitivity\\HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork.csproj",
+      "projectUniqueName": "C:\\Users\\Bob Kyle\\Documents\\3rd Year\\2nd Sem\\CS346\\HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork.csproj",
       "projectName": "Bobskie_HopfieldNetwork",
-      "projectPath": "C:\\Users\\charl\\OneDrive\\Desktop\\Intelligent Systems 2\\intelligent system acitivity\\HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork.csproj",
-      "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\charl\\OneDrive\\Desktop\\Intelligent Systems 2\\intelligent system acitivity\\HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\obj\\",
+      "projectPath": "C:\\Users\\Bob Kyle\\Documents\\3rd Year\\2nd Sem\\CS346\\HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork.csproj",
+      "packagesPath": "C:\\Users\\Bob Kyle\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bob Kyle\\Documents\\3rd Year\\2nd Sem\\CS346\\HopfieldNetwork\\Bobskie_HopfieldNetwork\\Bobskie_HopfieldNetwork\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\charl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bob Kyle\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
